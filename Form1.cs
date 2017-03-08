@@ -12,6 +12,10 @@ namespace Pazuzu
 {
     public partial class MainForm : Form
     {
+        ROMHandler Game = new ROMHandler();
+        public string ROMName;
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -55,6 +59,24 @@ namespace Pazuzu
         private void FormationEditStatusHelper(object sender, EventArgs e)
         {
             EditorStatusLabel.Text = "Open the monster formation editor.";
+        }
+
+        private void openROMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog FFMQ = new OpenFileDialog();
+
+            FFMQ.CheckFileExists = true;
+            FFMQ.CheckFileExists = true;
+            FFMQ.Title = "Load FFMQ ROM";
+            FFMQ.Filter = "Final Fantasy Mystic Quest 1.1 US ROM | *.smc";
+
+            if (FFMQ.ShowDialog(this) != DialogResult.OK)
+            {
+                MessageBox.Show("This is not a valid Final Fantasy Mystic Quest ROM.");
+            }
+
+            ROMName = Path.GetFullPath(FFMQ.FileName);
+            Game.OpenROM(FFMQ.FileName);
         }
     }
 }

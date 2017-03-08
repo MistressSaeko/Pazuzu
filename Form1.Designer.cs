@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.EditorStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.DatawriteStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveRIMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +37,9 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.EditorStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.DatawriteStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.FormationEditButton = new System.Windows.Forms.Button();
             this.MapEditButton = new System.Windows.Forms.Button();
             this.BtlFldEditButton = new System.Windows.Forms.Button();
@@ -59,45 +60,9 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(769, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(627, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.EditorStatusLabel,
-            this.DatawriteStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 100);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(769, 24);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // EditorStatusLabel
-            // 
-            this.EditorStatusLabel.AutoSize = false;
-            this.EditorStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-            this.EditorStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
-            this.EditorStatusLabel.Name = "EditorStatusLabel";
-            this.EditorStatusLabel.Size = new System.Drawing.Size(250, 19);
-            this.EditorStatusLabel.Text = "toolStripStatusLabel1";
-            this.EditorStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DatawriteStatusLabel
-            // 
-            this.DatawriteStatusLabel.AutoSize = false;
-            this.DatawriteStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-            this.DatawriteStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
-            this.DatawriteStatusLabel.Name = "DatawriteStatusLabel";
-            this.DatawriteStatusLabel.Size = new System.Drawing.Size(504, 19);
-            this.DatawriteStatusLabel.Spring = true;
-            this.DatawriteStatusLabel.Text = "toolStripStatusLabel3";
-            this.DatawriteStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // fileToolStripMenuItem
             // 
@@ -115,6 +80,7 @@
             this.openROMToolStripMenuItem.Name = "openROMToolStripMenuItem";
             this.openROMToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openROMToolStripMenuItem.Text = "Open ROM";
+            this.openROMToolStripMenuItem.Click += new System.EventHandler(this.openROMToolStripMenuItem_Click);
             // 
             // saveRIMToolStripMenuItem
             // 
@@ -146,6 +112,42 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EditorStatusLabel,
+            this.DatawriteStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 100);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(627, 24);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // EditorStatusLabel
+            // 
+            this.EditorStatusLabel.AutoSize = false;
+            this.EditorStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.EditorStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
+            this.EditorStatusLabel.Name = "EditorStatusLabel";
+            this.EditorStatusLabel.Size = new System.Drawing.Size(250, 19);
+            this.EditorStatusLabel.Text = "toolStripStatusLabel1";
+            this.EditorStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // DatawriteStatusLabel
+            // 
+            this.DatawriteStatusLabel.AutoSize = false;
+            this.DatawriteStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.DatawriteStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
+            this.DatawriteStatusLabel.Name = "DatawriteStatusLabel";
+            this.DatawriteStatusLabel.Size = new System.Drawing.Size(362, 19);
+            this.DatawriteStatusLabel.Spring = true;
+            this.DatawriteStatusLabel.Text = "toolStripStatusLabel3";
+            this.DatawriteStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormationEditButton
             // 
@@ -231,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 124);
+            this.ClientSize = new System.Drawing.Size(627, 124);
             this.Controls.Add(this.FormationEditButton);
             this.Controls.Add(this.MapEditButton);
             this.Controls.Add(this.BtlFldEditButton);
@@ -242,7 +244,9 @@
             this.Controls.Add(this.CharEditButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Pazuzu";
             this.menuStrip1.ResumeLayout(false);
