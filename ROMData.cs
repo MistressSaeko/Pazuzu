@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Pazuzu
 {
-    class Offsets
+    internal class ROMData
     {
-        public const int CharacterData = 0x0650B0;
     }
 }

@@ -5,13 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pazuzu
 {
-    public partial class CharEdit : Form
+    public partial class CharacterEditor : Form
     {
-        public CharEdit()
+        public CharacterEditor()
         {
             InitializeComponent();
         }

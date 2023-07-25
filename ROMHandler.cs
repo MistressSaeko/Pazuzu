@@ -1,11 +1,14 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Pazuzu
 {
-    class ROMHandler
+    internal class ROMHandler
     {
-        FileStream   ROM;
+        FileStream ROM;
         MemoryStream Mem;
         BinaryReader InputBinary;
         BinaryWriter OutputBinary;
