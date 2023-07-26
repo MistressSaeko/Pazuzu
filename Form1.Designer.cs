@@ -1,6 +1,6 @@
 ﻿namespace Pazuzu
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,102 +29,133 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             toolTip1 = new ToolTip(components);
+            WeaponEditorButton = new Button();
             statusStrip1 = new StatusStrip();
             toolStrip1 = new ToolStrip();
+            OpenROMButton = new ToolStripButton();
+            SaveROMButton = new ToolStripButton();
+            GeneratePatchButton = new ToolStripButton();
+            AboutButton = new ToolStripButton();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            button1 = new Button();
-            button2 = new Button();
+            CharacterEditorButton = new Button();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            statusStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
+            // WeaponEditorButton
+            // 
+            WeaponEditorButton.Image = Properties.Resources.sword;
+            WeaponEditorButton.Location = new Point(79, 3);
+            WeaponEditorButton.Name = "WeaponEditorButton";
+            WeaponEditorButton.Size = new Size(70, 70);
+            WeaponEditorButton.TabIndex = 1;
+            toolTip1.SetToolTip(WeaponEditorButton, "Opens the weapon editor.");
+            WeaponEditorButton.UseVisualStyleBackColor = true;
+            WeaponEditorButton.Click += WeaponEditorButton_Click;
+            // 
             // statusStrip1
             // 
-            statusStrip1.Location = new Point(0, 101);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 115);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 22);
+            statusStrip1.SizingGrip = false;
             statusStrip1.TabIndex = 0;
             statusStrip1.Text = "statusStrip1";
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3 });
+            toolStrip1.ImageScalingSize = new Size(32, 32);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { OpenROMButton, SaveROMButton, GeneratePatchButton, AboutButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(800, 39);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
+            // OpenROMButton
+            // 
+            OpenROMButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            OpenROMButton.Image = Properties.Resources.folder_open;
+            OpenROMButton.ImageTransparentColor = Color.Magenta;
+            OpenROMButton.Name = "OpenROMButton";
+            OpenROMButton.Size = new Size(36, 36);
+            OpenROMButton.Text = "toolStripButton1";
+            OpenROMButton.ToolTipText = "Open a ROM to edit.";
+            // 
+            // SaveROMButton
+            // 
+            SaveROMButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            SaveROMButton.Image = Properties.Resources.media_floppy;
+            SaveROMButton.ImageTransparentColor = Color.Magenta;
+            SaveROMButton.Name = "SaveROMButton";
+            SaveROMButton.Size = new Size(36, 36);
+            SaveROMButton.Text = "toolStripButton2";
+            SaveROMButton.ToolTipText = "Saves the edited ROM.";
+            // 
+            // GeneratePatchButton
+            // 
+            GeneratePatchButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            GeneratePatchButton.Image = Properties.Resources.emblem_favorite;
+            GeneratePatchButton.ImageTransparentColor = Color.Magenta;
+            GeneratePatchButton.Name = "GeneratePatchButton";
+            GeneratePatchButton.Size = new Size(36, 36);
+            GeneratePatchButton.Text = "toolStripButton3";
+            GeneratePatchButton.ToolTipText = "Generate an IPS patch.";
+            // 
+            // AboutButton
+            // 
+            AboutButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            AboutButton.Image = Properties.Resources.help_browser;
+            AboutButton.ImageTransparentColor = Color.Magenta;
+            AboutButton.Name = "AboutButton";
+            AboutButton.Size = new Size(36, 36);
+            AboutButton.Text = "toolStripButton1";
+            AboutButton.ToolTipText = "About this app.";
+            AboutButton.Click += AboutButton_Click;
+            // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(button1);
-            flowLayoutPanel1.Controls.Add(button2);
+            flowLayoutPanel1.Controls.Add(CharacterEditorButton);
+            flowLayoutPanel1.Controls.Add(WeaponEditorButton);
             flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(0, 25);
+            flowLayoutPanel1.Location = new Point(0, 39);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(800, 76);
             flowLayoutPanel1.TabIndex = 2;
             // 
-            // toolStripButton1
+            // CharacterEditorButton
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
+            CharacterEditorButton.Image = Properties.Resources.kaeli;
+            CharacterEditorButton.Location = new Point(3, 3);
+            CharacterEditorButton.Name = "CharacterEditorButton";
+            CharacterEditorButton.Size = new Size(70, 70);
+            CharacterEditorButton.TabIndex = 0;
+            CharacterEditorButton.UseVisualStyleBackColor = true;
+            CharacterEditorButton.Click += CharacterEditorButton_Click;
             // 
-            // toolStripButton2
+            // toolStripStatusLabel1
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(23, 22);
-            toolStripButton2.Text = "toolStripButton2";
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(118, 17);
+            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // toolStripButton3
-            // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(23, 22);
-            toolStripButton3.Text = "toolStripButton3";
-            // 
-            // button1
-            // 
-            button1.Image = Properties.Resources.kaeli;
-            button1.Location = new Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(70, 70);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Image = Properties.Resources.sword;
-            button2.Location = new Point(79, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(70, 70);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 123);
+            ClientSize = new Size(800, 137);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(toolStrip1);
             Controls.Add(statusStrip1);
-            Name = "Form1";
-            Text = "Form1";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Name = "MainForm";
+            Text = "Pazuzu";
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
@@ -138,10 +169,12 @@
         private StatusStrip statusStrip1;
         private ToolStrip toolStrip1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
-        private Button button1;
-        private Button button2;
+        private ToolStripButton OpenROMButton;
+        private ToolStripButton SaveROMButton;
+        private ToolStripButton GeneratePatchButton;
+        private Button CharacterEditorButton;
+        private Button WeaponEditorButton;
+        private ToolStripButton AboutButton;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

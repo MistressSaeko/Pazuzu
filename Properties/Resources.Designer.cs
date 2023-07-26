@@ -83,6 +83,36 @@ namespace Pazuzu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap emblem_favorite {
+            get {
+                object obj = ResourceManager.GetObject("emblem_favorite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_open {
+            get {
+                object obj = ResourceManager.GetObject("folder_open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help_browser {
+            get {
+                object obj = ResourceManager.GetObject("help_browser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kaeli {
             get {
                 object obj = ResourceManager.GetObject("kaeli", resourceCulture);
@@ -96,6 +126,16 @@ namespace Pazuzu.Properties {
         internal static System.Drawing.Bitmap magic {
             get {
                 object obj = ResourceManager.GetObject("magic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap media_floppy {
+            get {
+                object obj = ResourceManager.GetObject("media_floppy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
